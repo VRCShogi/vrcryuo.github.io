@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRC竜王戦 | 公式サイト</title>
+  <meta name="description" content="VRC竜王戦の公式サイト。イベント概要、トーナメント、棋譜ビューア、関連リンクを1ページで掲載。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="hero__eyebrow">Virtual Reality Club Shogi Event</p>
+      <h1>VRC竜王戦</h1>
+      <p class="hero__lead">木の温もりと静かな緊張感が同居する、VR将棋イベントの公式サイト。</p>
+      <div class="hero__meta">
+        <span>開催形式: オンライン / VR会場</span>
+        <span>種別: トーナメント</span>
+        <span>観戦: 公開予定</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#overview">イベント概要</a></li>
+        <li><a href="#tournament">トーナメント</a></li>
+        <li><a href="#records">棋譜</a></li>
+        <li><a href="#links">関連リンク</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overview" class="section section--paper">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__label">Overview</p>
+          <h2>イベント概要</h2>
+          <p>後から文言や画像を差し替えやすいよう、情報ブロックを分離した構成にしています。</p>
+        </div>
+        <div class="grid-two">
+          <article class="card card--paper">
+            <h3>開催コンセプト</h3>
+            <p>
+              VRC竜王戦は、VR空間で将棋対局・観戦・交流を楽しむためのイベントです。静寂と集中を大切にしながら、
+              オンラインならではの演出で対局を引き立てます。
+            </p>
+            <p>
+              この文章はサンプルです。日程、参加条件、観戦方法、エントリー手順などに差し替えて利用してください。
+            </p>
+            <dl class="info-list">
+              <div><dt>開催日</dt><dd>2026年XX月XX日</dd></div>
+              <div><dt>会場</dt><dd>VRC特設ワールド</dd></div>
+              <div><dt>主催</dt><dd>VRC竜王戦実行委員会</dd></div>
+            </dl>
+          </article>
+          <aside class="visual-card">
+            <div class="placeholder-image" aria-label="イベント画像のダミー枠">
+              <span>Image Placeholder</span>
+            </div>
+            <p class="visual-card__caption">ここにメインビジュアルや会場スクリーンショットを配置できます。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="tournament" class="section section--wood">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__label">Tournament</p>
+          <h2>トーナメント</h2>
+          <p>対戦表画像・進行ルール・組み合わせ説明などを掲載する想定です。</p>
+        </div>
+        <div class="grid-two">
+          <article class="card card--wood">
+            <h3>進行イメージ</h3>
+            <ol class="timeline">
+              <li>開会アナウンス / 参加者集合</li>
+              <li>一回戦</li>
+              <li>準決勝</li>
+              <li>決勝 / 表彰</li>
+            </ol>
+            <p>
+              このブロックはテキスト編集だけで運用できるようにしてあります。大会ルール、持ち時間、配信URL案内などを追記してください。
+            </p>
+          </article>
+          <aside class="visual-card">
+            <div class="placeholder-image placeholder-image--bracket" aria-label="トーナメント表のダミー枠">
+              <span>Bracket Placeholder</span>
+            </div>
+            <p class="visual-card__caption">ここにトーナメント表画像を配置できます。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="records" class="section section--paper">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__label">Kifu</p>
+          <h2>棋譜</h2>
+          <p>`棋譜/index.json` を読み込み、選択した `.kif` を盤面付きで表示します。</p>
+        </div>
+
+        <div class="kifu-layout" id="kifu-app">
+          <aside class="kifu-sidebar card card--paper">
+            <div class="panel-header">
+              <h3>棋譜一覧</h3>
+              <p class="panel-note">JSONから自動反映</p>
+            </div>
+            <div id="kifu-index-status" class="status-message">棋譜一覧を読み込んでいます...</div>
+            <div id="kifu-index" class="kifu-index" aria-live="polite"></div>
+          </aside>
+
+          <section class="kifu-viewer card card--paper">
+            <div class="panel-header">
+              <h3>棋譜ビューア</h3>
+              <p class="panel-note">現在の局面・指し手・対局情報</p>
+            </div>
+
+            <div id="kifu-error" class="status-message status-message--error hidden"></div>
+            <div id="kifu-empty" class="status-message hidden">左側の棋譜を選択すると盤面を表示します。</div>
+
+            <div id="kifu-content" class="hidden">
+              <div class="match-meta">
+                <div><span class="meta-label">タイトル</span><span id="meta-title">-</span></div>
+                <div><span class="meta-label">先手</span><span id="meta-black">-</span></div>
+                <div><span class="meta-label">後手</span><span id="meta-white">-</span></div>
+                <div><span class="meta-label">開始日時</span><span id="meta-date">-</span></div>
+                <div><span class="meta-label">手合割</span><span id="meta-handicap">-</span></div>
+                <div><span class="meta-label">結果</span><span id="meta-result">-</span></div>
+              </div>
+
+              <div class="viewer-grid">
+                <div class="board-zone">
+                  <div class="hands hands--top">
+                    <h4>後手の持ち駒</h4>
+                    <div id="white-hand" class="hands__pieces">なし</div>
+                  </div>
+
+                  <div class="board-wrap">
+                    <div class="board-header">
+                      <span>９</span><span>８</span><span>７</span><span>６</span><span>５</span><span>４</span><span>３</span><span>２</span><span>１</span>
+                    </div>
+                    <div id="shogi-board" class="shogi-board" role="grid" aria-label="将棋盤"></div>
+                    <div class="board-ranks">
+                      <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>七</span><span>八</span><span>九</span>
+                    </div>
+                  </div>
+
+                  <div class="hands hands--bottom">
+                    <h4>先手の持ち駒</h4>
+                    <div id="black-hand" class="hands__pieces">なし</div>
+                  </div>
+                </div>
+
+                <div class="move-zone">
+                  <div class="controls">
+                    <button type="button" id="btn-first">最初へ</button>
+                    <button type="button" id="btn-prev">1手戻る</button>
+                    <button type="button" id="btn-next">1手進む</button>
+                    <button type="button" id="btn-last">最後へ</button>
+                    <a id="btn-download" class="button-like" href="#" download>`.kif`をダウンロード</a>
+                  </div>
+
+                  <div class="move-status">
+                    <span id="move-counter">0 / 0 手</span>
+                    <span id="move-description">初期局面</span>
+                  </div>
+
+                  <div id="move-list" class="move-list" aria-label="指し手一覧"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section section--wood">
+      <div class="container">
+        <div class="section__heading">
+          <p class="section__label">Links</p>
+          <h2>関連リンク</h2>
+          <p>公式X、配信ページ、コミュニティ案内などをカードで掲載できます。</p>
+        </div>
+        <div class="link-cards">
+          <a class="link-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <div class="link-card__thumb">Official</div>
+            <div class="link-card__body">
+              <h3>公式サイトサンプル</h3>
+              <p>告知ページやイベント概要の外部リンク用カード。</p>
+            </div>
+          </a>
+          <a class="link-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <div class="link-card__thumb">Stream</div>
+            <div class="link-card__body">
+              <h3>配信ページサンプル</h3>
+              <p>当日の配信URLやアーカイブ導線に使えます。</p>
+            </div>
+          </a>
+          <a class="link-card" href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <div class="link-card__thumb">Community</div>
+            <div class="link-card__body">
+              <h3>コミュニティサンプル</h3>
+              <p>Discord、Booth、参加規約ページなどへのリンク向け。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© VRC竜王戦. All rights reserved.</p>
+      <a href="#top">ページ先頭へ戻る</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
