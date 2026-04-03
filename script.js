@@ -86,7 +86,7 @@
 
   async function loadIndex() {
     try {
-      const response = await fetch('./kif/index.json', { cache: 'no-store' });
+      const response = await fetch('./棋譜/index.json', { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`index.json の取得に失敗しました (${response.status})`);
       }
