@@ -68,27 +68,275 @@
         <div class="section__heading">
           <p class="section__label">Tournament</p>
           <h2>トーナメント</h2>
-          <p>対戦表画像・進行ルール・組み合わせ説明などを掲載する想定です。</p>
+          <p>4グループ総当り戦の勝敗表です。グループを切り替えて各組の進行状況を確認できます。</p>
         </div>
-        <div class="grid-two">
-          <article class="card card--wood">
-            <h3>進行イメージ</h3>
-            <ol class="timeline">
-              <li>開会アナウンス / 参加者集合</li>
-              <li>一回戦</li>
-              <li>準決勝</li>
-              <li>決勝 / 表彰</li>
-            </ol>
-            <p>
-              このブロックはテキスト編集だけで運用できるようにしてあります。大会ルール、持ち時間、配信URL案内などを追記してください。
-            </p>
-          </article>
-          <aside class="visual-card">
-            <div class="placeholder-image placeholder-image--bracket" aria-label="トーナメント表のダミー枠">
-              <span>Bracket Placeholder</span>
+    
+        <div class="tournament-panel card card--paper">
+          <div class="tournament-header">
+            <div>
+              <h3>グループ別 勝敗表</h3>
+              <p class="panel-note">参加者名・勝敗はHTML内の表を手動更新してください。</p>
             </div>
-            <p class="visual-card__caption">ここにトーナメント表画像を配置できます。</p>
-          </aside>
+          </div>
+    
+          <div class="group-tabs" role="tablist" aria-label="グループ切り替え">
+            <button class="group-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="group-a" data-group-tab="group-a">Aグループ</button>
+            <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-b" data-group-tab="group-b">Bグループ</button>
+            <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-c" data-group-tab="group-c">Cグループ</button>
+            <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-d" data-group-tab="group-d">Dグループ</button>
+          </div>
+    
+          <div class="group-panels">
+            <section id="group-a" class="group-panel is-active" role="tabpanel" aria-labelledby="group-a-tab">
+              <div class="group-panel__head">
+                <h4>Aグループ</h4>
+                <p>4〜5人の参加者名と結果を直接編集してください。</p>
+              </div>
+              <div class="standings-table-wrap">
+                <table class="standings-table">
+                  <thead>
+                    <tr>
+                      <th>選手</th>
+                      <th>chamomile7</th>
+                      <th>こげもち</th>
+                      <th>zusio acc2</th>
+                      <th>藤井さとり</th>
+                      <th>勝</th>
+                      <th>負</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>chamomile7</th>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>○</td>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>こげもち</th>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>zusio acc2</th>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>藤井さとり</th>
+                      <td>●</td>
+                      <td>●</td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>0</td>
+                      <td>3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+    
+            <section id="group-b" class="group-panel" role="tabpanel" aria-labelledby="group-b-tab" hidden>
+              <div class="group-panel__head">
+                <h4>Bグループ</h4>
+                <p>必要に応じて5人制に増やしてください。</p>
+              </div>
+              <div class="standings-table-wrap">
+                <table class="standings-table">
+                  <thead>
+                    <tr>
+                      <th>選手</th>
+                      <th>海老fly</th>
+                      <th>hanabi</th>
+                      <th>kent477</th>
+                      <th>kisssaki</th>
+                      <th>勝</th>
+                      <th>負</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>海老fly</th>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>hanabi</th>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>●</td>
+                      <td>○</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <th>kent477</th>
+                      <td>●</td>
+                      <td>○</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>2</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>kisssaki</th>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+    
+            <section id="group-c" class="group-panel" role="tabpanel" aria-labelledby="group-c-tab" hidden>
+              <div class="group-panel__head">
+                <h4>Cグループ</h4>
+                <p>未確定の対戦は空欄のままでも運用できます。</p>
+              </div>
+              <div class="standings-table-wrap">
+                <table class="standings-table">
+                  <thead>
+                    <tr>
+                      <th>選手</th>
+                      <th>なちは</th>
+                      <th>ミナミ025</th>
+                      <th>しふぉん</th>
+                      <th>森永タニシ</th>
+    				  <th>ぷるむこおら</th>
+                      <th>勝</th>
+                      <th>負</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>なちは</th>
+                      <td>-</td>
+                      <td>○</td>
+                      <td></td>
+                      <td>●</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>ミナミ025</th>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td></td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>しふぉん</th>
+                      <td></td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <th>森永タニシ</th>
+                      <td>○</td>
+                      <td></td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+    				<tr>
+                      <th>ぷるむこおら</th>
+                      <td>○</td>
+                      <td></td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>1</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+    
+            <section id="group-d" class="group-panel" role="tabpanel" aria-labelledby="group-d-tab" hidden>
+              <div class="group-panel__head">
+                <h4>Dグループ</h4>
+                <p>5人制にする場合は列と行を1人分追加してください。</p>
+              </div>
+              <div class="standings-table-wrap">
+                <table class="standings-table">
+                  <thead>
+                    <tr>
+                      <th>選手</th>
+                      <th>Benjamin</th>
+                      <th>やまちー</th>
+                      <th>マルシェル</th>
+                      <th>bookhunter</th>
+                      <th>勝</th>
+                      <th>負</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Benjamin</th>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>○</td>
+                      <td>3</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <th>やまちー</th>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <th>マルシェル</th>
+                      <td>●</td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>○</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <th>bookhunter</th>
+                      <td>●</td>
+                      <td>○</td>
+                      <td>●</td>
+                      <td>-</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
