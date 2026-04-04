@@ -57,6 +57,7 @@
   function init() {
     setupBoardSkeleton();
     bindControls();
+    bindTournamentTabs();
     loadIndex();
   }
 
@@ -694,6 +695,31 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#39;');
+  }
+
+  function bindTournamentTabs() {
+    const tabs = document.querySelectorAll('[data-group-tab]');
+    const panels = document.querySelectorAll('.group-panel');
+  
+    if (!tabs.length || !panels.length) return;
+  
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.groupTab;
+  
+        tabs.forEach((item) => {
+          const isActive = item === tab;
+          item.classList.toggle('is-active', isActive);
+          item.setAttribute('aria-selected', String(isActive));
+        });
+  
+        panels.forEach((panel) => {
+          const isActive = panel.id === targetId;
+          panel.classList.toggle('is-active', isActive);
+          panel.hidden = !isActive;
+        });
+      });
+    });
   }
 
   init();
