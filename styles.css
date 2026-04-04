@@ -559,3 +559,115 @@ button, .button-like {
     gap: 2px;
   }
 }
+
+.tournament-panel {
+  padding: 24px;
+}
+
+.tournament-header {
+  margin-bottom: 18px;
+}
+
+.group-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.group-tab {
+  border: 1px solid rgba(91, 54, 19, 0.22);
+  background: linear-gradient(180deg, #fff9f0, #ecd8bd);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 5px 10px rgba(61, 39, 18, 0.08);
+}
+
+.group-tab:hover,
+.group-tab:focus-visible {
+  transform: translateY(-1px);
+}
+
+.group-tab.is-active {
+  background: linear-gradient(180deg, rgba(140, 90, 43, 0.24), rgba(140, 90, 43, 0.1));
+  border-color: rgba(140, 90, 43, 0.48);
+  font-weight: 700;
+}
+
+.group-panel {
+  display: none;
+}
+
+.group-panel.is-active {
+  display: block;
+}
+
+.group-panel__head {
+  margin-bottom: 14px;
+}
+
+.group-panel__head h4 {
+  margin: 0 0 6px;
+}
+
+.group-panel__head p {
+  margin: 0;
+  color: rgba(47, 36, 24, 0.76);
+}
+
+.standings-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.standings-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.98rem;
+}
+
+.standings-table th,
+.standings-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(89, 58, 28, 0.12);
+  border-right: 1px solid rgba(89, 58, 28, 0.08);
+  white-space: nowrap;
+}
+
+.standings-table thead th {
+  background: rgba(140, 90, 43, 0.1);
+  font-weight: 700;
+}
+
+.standings-table tbody th {
+  background: rgba(140, 90, 43, 0.06);
+  text-align: left;
+}
+
+.standings-table tr:last-child th,
+.standings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.standings-table th:last-child,
+.standings-table td:last-child {
+  border-right: none;
+}
+
+@media (max-width: 640px) {
+  .group-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .group-tab {
+    text-align: center;
+  }
+}
