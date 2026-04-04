@@ -55,10 +55,10 @@
   };
 
   function init() {
-    //setupBoardSkeleton();
-    //bindControls();
-    //bindTournamentTabs();
-    //loadIndex();
+    setupBoardSkeleton();
+    bindControls();
+    bindTournamentTabs();
+    loadIndex();
   }
 
   function setupBoardSkeleton() {
@@ -657,10 +657,10 @@
       row.classList.toggle('is-active', index === state.selectedMove);
     });
 
-    //const active = rows[state.selectedMove];
-    //if (active) {
-      //active.scrollIntoView({ block: 'nearest' });
-    //}
+    const active = rows[state.selectedMove];
+    if (active) {
+      active.scrollIntoView({ block: 'nearest' });
+    }
   }
 
   function updateActiveIndex() {
@@ -722,7 +722,7 @@
     });
   }
 
-  init();
+ 
 
   window.addEventListener('load', () => {
     window.scrollTo(0, 0);
