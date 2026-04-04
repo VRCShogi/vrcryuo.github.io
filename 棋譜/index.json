@@ -1,9 +1,9 @@
 {
   "sections": [
     {
-      "name": "一回戦",
+      "name": "GroupA",
       "files": [
-        { "title": "A_vs_B", "path": "棋譜/一回戦/A_vs_B.kif" }
+        { "title": "chamomile7_vs_こげもち", "path": "棋譜/グループA/chamomile7_vs_こげもち.kif" }
       ]
     }
   ]
