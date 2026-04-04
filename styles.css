@@ -671,3 +671,11 @@ button, .button-like {
     text-align: center;
   }
 }
+
+.event-image {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
