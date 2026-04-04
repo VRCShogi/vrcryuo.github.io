@@ -55,10 +55,10 @@
   };
 
   function init() {
-    setupBoardSkeleton();
-    bindControls();
-    bindTournamentTabs();
-    loadIndex();
+    //setupBoardSkeleton();
+    //bindControls();
+    //bindTournamentTabs();
+    //loadIndex();
   }
 
   function setupBoardSkeleton() {
