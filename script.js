@@ -656,10 +656,18 @@
     rows.forEach((row, index) => {
       row.classList.toggle('is-active', index === state.selectedMove);
     });
-
+  
     const active = rows[state.selectedMove];
     if (active) {
-      active.scrollIntoView({ block: 'nearest' });
+      const listRect = elements.moveList.getBoundingClientRect();
+      const activeRect = active.getBoundingClientRect();
+  
+      const isAbove = activeRect.top < listRect.top;
+      const isBelow = activeRect.bottom > listRect.bottom;
+  
+      if (isAbove || isBelow) {
+        active.scrollIntoView({ block: 'nearest' });
+      }
     }
   }
 
