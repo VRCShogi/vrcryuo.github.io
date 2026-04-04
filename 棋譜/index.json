@@ -5,12 +5,6 @@
       "files": [
         { "title": "A_vs_B", "path": "棋譜/一回戦/A_vs_B.kif" }
       ]
-    },
-    {
-      "name": "決勝",
-      "files": [
-        { "title": "I_vs_J", "path": "棋譜/決勝/I_vs_J.kif" }
-      ]
     }
   ]
 }
