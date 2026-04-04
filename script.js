@@ -657,10 +657,10 @@
       row.classList.toggle('is-active', index === state.selectedMove);
     });
 
-    const active = rows[state.selectedMove];
-    if (active) {
-      active.scrollIntoView({ block: 'nearest' });
-    }
+    //const active = rows[state.selectedMove];
+    //if (active) {
+      //active.scrollIntoView({ block: 'nearest' });
+    //}
   }
 
   function updateActiveIndex() {
