@@ -297,6 +297,7 @@ button, .button-like {
 .match-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 600px;
   gap: 12px;
   margin-bottom: 20px;
 }
