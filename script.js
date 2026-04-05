@@ -154,7 +154,7 @@
         button.type = 'button';
         button.className = 'kifu-index__item';
         button.dataset.path = file.path;
-        button.innerHTML = `<strong>${escapeHtml(file.title)}</strong><span class="kifu-index__path">${escapeHtml(file.path)}</span>`;
+        button.innerHTML = `<strong>${escapeHtml(file.title)}</strong>`;
         button.addEventListener('click', () => loadKif(file));
         list.appendChild(button);
       });
