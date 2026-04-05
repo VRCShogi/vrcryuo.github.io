@@ -286,13 +286,6 @@ button, .button-like {
   background: linear-gradient(180deg, rgba(140, 90, 43, 0.18), rgba(140, 90, 43, 0.08));
   border-color: rgba(140, 90, 43, 0.55);
 }
-.kifu-index__path {
-  display: block;
-  margin-top: 4px;
-  font-size: 0.8rem;
-  opacity: 0.7;
-  word-break: break-all;
-}
 
 .match-meta {
   display: grid;
