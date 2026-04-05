@@ -610,7 +610,25 @@
         if (piece) {
           const pieceEl = document.createElement('div');
           pieceEl.className = `piece ${piece.owner === 'white' ? 'piece--white' : ''}`;
-          pieceEl.textContent = PIECE_LABELS[piece.code] || piece.code;
+          const label = PIECE_LABELS[piece.code] || piece.code;
+
+          // 成駒は1文字に変換
+          const promotedMap = {
+            'TO': 'と',
+            'NY': '香',
+            'NK': '桂',
+            'NG': '銀',
+            'UM': '馬',
+            'RY': '龍'
+          };
+          
+          pieceEl.textContent = promotedMap[piece.code] || label;
+          
+          // 成駒ならクラス付与
+          if (['TO','NY','NK','NG','UM','RY'].includes(piece.code)) {
+            pieceEl.classList.add('piece--promoted');
+          }
+          
           pieceEl.title = `${piece.owner === 'black' ? '先手' : '後手'}: ${PIECE_LABELS[piece.code] || piece.code}`;
           cell.appendChild(pieceEl);
         }
