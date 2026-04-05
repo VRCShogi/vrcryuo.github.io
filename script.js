@@ -554,11 +554,8 @@
     clearError();
 
     const { metadata, moves } = state.record;
-    elements.metaTitle.textContent = state.currentFile.title || metadata.title || '-';
     elements.metaBlack.textContent = metadata.black || '-';
     elements.metaWhite.textContent = metadata.white || '-';
-    elements.metaDate.textContent = metadata.startDate || '-';
-    elements.metaHandicap.textContent = metadata.handicap || '-';
     elements.metaResult.textContent = metadata.result || '-';
     elements.btnDownload.href = `./${state.currentFile.path}`;
     elements.btnDownload.setAttribute('download', state.currentFile.path.split('/').pop() || 'record.kif');
