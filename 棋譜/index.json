@@ -8,6 +8,12 @@
       ]
     },
     {
+      "name": "GroupB",
+      "files": [
+        { "title": "●海老fly vs hanabi○", "path": "棋譜/グループB/abfly_vs_hanabi.kif" }
+      ]
+    },
+    {
       "name": "GroupD",
       "files": [
         { "title": "●マルシェル vs Benjamin○", "path": "棋譜/グループD/マルシェルvsべんじゃみん.kif" },
