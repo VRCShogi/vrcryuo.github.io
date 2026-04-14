@@ -10,6 +10,12 @@
     {
       "name": "GroupB",
       "files": [
+        { "title": "○しふぉん vs ミナミ025●", "path": "棋譜/グループC/しふぉんvsミナミ025.kif" }
+      ]
+    },
+    {
+      "name": "GroupC",
+      "files": [
         { "title": "●海老fly vs hanabi○", "path": "棋譜/グループB/abfly_vs_hanabi.kif" }
       ]
     },
