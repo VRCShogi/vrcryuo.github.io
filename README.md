@@ -47,7 +47,7 @@ GitHub Pages でそのまま公開できる、1ページ構成の静的サイト
 ├─ README.md
 └─ 棋譜/
    ├─ index.json
-   ├─ 一回戦/
+   ├─ グループA/
    │  └─ A_vs_B.kif
-   └─ 決勝/
+   └─ グループB/
       └─ I_vs_J.kif
