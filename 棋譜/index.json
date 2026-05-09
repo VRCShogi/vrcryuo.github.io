@@ -15,7 +15,8 @@
       "name": "GroupB",
       "files": [
         { "title": "●海老fly vs hanabi○", "path": "棋譜/グループB/abfly_vs_hanabi.kif" },
-        { "title": "●hanabi vs kisssaki○", "path": "棋譜/グループB/hanabivskisssaki.kif" }
+        { "title": "●hanabi vs kisssaki○", "path": "棋譜/グループB/hanabivskisssaki.kif" },
+        { "title": "●kisssaki vs 海老fly○", "path": "棋譜/グループB/kisssakivsabfly.kif" }
       ]
     },
     {
