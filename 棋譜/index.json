@@ -16,7 +16,8 @@
       "files": [
         { "title": "●海老fly vs hanabi○", "path": "棋譜/グループB/abfly_vs_hanabi.kif" },
         { "title": "●hanabi vs kisssaki○", "path": "棋譜/グループB/hanabivskisssaki.kif" },
-        { "title": "●kisssaki vs 海老fly○", "path": "棋譜/グループB/kisssakivsabfly.kif" }
+        { "title": "●kisssaki vs 海老fly○", "path": "棋譜/グループB/kisssakivsabfly.kif" },
+        { "title": "○hanabi vs kent477●", "path": "棋譜/グループB/hanabi_kenzzz.kif" }
       ]
     },
     {
@@ -27,7 +28,9 @@
         { "title": "○ミナミ025 vs ぷるむこおら●", "path": "棋譜/グループC/ミナミ025vsぷるむこおら.kif" },
         { "title": "●ミナミ025 vs 森永タニシ○", "path": "棋譜/グループC/ミナミvsタニシ.kif" },
         { "title": "○森永タニシ vs ぷるむこおら●", "path": "棋譜/グループC/Morinaga91vsぷるむこおら.kif" },
-        { "title": "○なちは vs 森永タニシ●", "path": "棋譜/グループC/natiha492-tanishi91.kif" }
+        { "title": "○なちは vs 森永タニシ●", "path": "棋譜/グループC/natiha492-tanishi91.kif" },
+        { "title": "●ぷるむこおら vs しふぉん○", "path": "棋譜/グループC/ぷるむこおらvs雪狐しふぉん.kif" },
+        { "title": "○ぷるむこおら vs なちは●", "path": "棋譜/グループC/ploomcolavsnatiha492.kif" }
       ]
     },
     {
