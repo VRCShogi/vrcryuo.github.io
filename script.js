@@ -97,9 +97,9 @@
       renderIndex(data);
       elements.indexStatus.classList.add('hidden');
 
-      const firstFile = getFirstFile(data);
-      if (firstFile) {
-        await loadKif(firstFile);
+      const hasFiles = data.sections.some((section) => section.files.length > 0);
+      if (hasFiles) {
+        showEmpty('グループを展開して棋譜を選択してください。');
       } else {
         showEmpty('棋譜一覧にファイルがありません。`棋譜/index.json` を確認してください。');
       }
@@ -125,29 +125,37 @@
     });
   }
 
-  function getFirstFile(data) {
-    for (const section of data.sections) {
-      if (section.files.length > 0) {
-        return section.files[0];
-      }
-    }
-    return null;
-  }
-
   function renderIndex(data) {
     elements.indexRoot.innerHTML = '';
     const fragment = document.createDocumentFragment();
 
-    data.sections.forEach((section) => {
+    data.sections.forEach((section, sectionIndex) => {
       const wrap = document.createElement('section');
       wrap.className = 'kifu-index__section';
 
       const title = document.createElement('h4');
-      title.textContent = section.name;
+      const toggle = document.createElement('button');
+      const listId = `kifu-index-section-${sectionIndex}`;
+      toggle.type = 'button';
+      toggle.className = 'kifu-index__toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', listId);
+      toggle.innerHTML = `
+        <span class="kifu-index__toggle-label">${escapeHtml(section.name)}</span>
+        <span class="kifu-index__count">${section.files.length}局</span>
+      `;
+      title.appendChild(toggle);
       wrap.appendChild(title);
 
       const list = document.createElement('div');
       list.className = 'kifu-index__list';
+      list.id = listId;
+      list.hidden = true;
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggleKifuSection(toggle, list, !expanded);
+      });
 
       section.files.forEach((file) => {
         const button = document.createElement('button');
@@ -165,6 +173,12 @@
 
     elements.indexRoot.appendChild(fragment);
     updateActiveIndex();
+  }
+
+  function toggleKifuSection(toggle, list, expanded) {
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.classList.toggle('is-expanded', expanded);
+    list.hidden = !expanded;
   }
 
   function renderIndexError(message) {
