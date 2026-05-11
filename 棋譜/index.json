@@ -7,7 +7,8 @@
         { "title": "●こげもち vs 藤井さとり○", "path": "棋譜/グループA/KOGEMOCHIvs藤井さとり.kif" },
         { "title": "●chamomile7 vs 藤井さとり○", "path": "棋譜/グループA/chamomile7vs藤井さとり.kif" },
         { "title": "●zusio acc2 vs こげもち○", "path": "棋譜/グループA/zusioacc2_vs_こげもち.kif" },
-        { "title": "●chamomile7 vs zusio acc2○", "path": "棋譜/グループA/chamomile7vszusio.kif" }
+        { "title": "●chamomile7 vs zusio acc2○", "path": "棋譜/グループA/chamomile7vszusio.kif" },
+        { "title": "○藤井さとり vs zusio acc2●", "path": "棋譜/グループA/藤井さとりvszusio.kif" }
         
       ]
     },
