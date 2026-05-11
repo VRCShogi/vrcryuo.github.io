@@ -17,7 +17,9 @@
         { "title": "●海老fly vs hanabi○", "path": "棋譜/グループB/abfly_vs_hanabi.kif" },
         { "title": "●hanabi vs kisssaki○", "path": "棋譜/グループB/hanabivskisssaki.kif" },
         { "title": "●kisssaki vs 海老fly○", "path": "棋譜/グループB/kisssakivsabfly.kif" },
-        { "title": "○hanabi vs kent477●", "path": "棋譜/グループB/hanabi_kenzzz.kif" }
+        { "title": "○hanabi vs kent477●", "path": "棋譜/グループB/hanabi_kenzzz.kif" },
+        { "title": "●kent477 vs 海老fly○", "path": "棋譜/グループB/kenzzzvsabfly.kif" },
+        { "title": "●kisssaki vs kent477○", "path": "棋譜/グループB/kisssakiVSken.kif" }
       ]
     },
     {
@@ -30,7 +32,8 @@
         { "title": "○森永タニシ vs ぷるむこおら●", "path": "棋譜/グループC/Morinaga91vsぷるむこおら.kif" },
         { "title": "○なちは vs 森永タニシ●", "path": "棋譜/グループC/natiha492-tanishi91.kif" },
         { "title": "●ぷるむこおら vs しふぉん○", "path": "棋譜/グループC/ぷるむこおらvs雪狐しふぉん.kif" },
-        { "title": "○ぷるむこおら vs なちは●", "path": "棋譜/グループC/ploomcolavsnatiha492.kif" }
+        { "title": "○ぷるむこおら vs なちは●", "path": "棋譜/グループC/ploomcolavsnatiha492.kif" },
+        { "title": "●なちは vs ミナミ025○", "path": "棋譜/グループC/natiha492-minami0525.kif" }
       ]
     },
     {
@@ -38,7 +41,10 @@
       "files": [
         { "title": "●マルシェル vs Benjamin○", "path": "棋譜/グループD/マルシェルvsべんじゃみん.kif" },
         { "title": "●やまちー vs Benjamin○", "path": "棋譜/グループD/やまちーvsBenjamin.kif" },
-        { "title": "●bookhunter vs Benjamin○", "path": "棋譜/グループD/bookhuntervsBenjamin.kif" }
+        { "title": "●bookhunter vs Benjamin○", "path": "棋譜/グループD/bookhuntervsBenjamin.kif" },
+        { "title": "○bookhunter vs マルシェル●", "path": "棋譜/グループD/bookhunter_vs_Marcelle.kif" },
+        { "title": "●bookhunter vs やまちー○", "path": "棋譜/グループD/bookhunter_vs_yamachiii.kif" },
+        { "title": "○マルシェル vs やまちー●", "path": "棋譜/グループD/YamachiMarcelle.kif" }
       ]
     }
   ]
