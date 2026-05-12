@@ -70,7 +70,7 @@
         <div class="tournament-panel card card--paper">
           <div class="tournament-header">
             <div>
-              <h3>リーグ勝敗表</h3>
+              <h3>リーグ勝敗表・決勝トーナメント</h3>
             </div>
           </div>
     
@@ -79,6 +79,7 @@
             <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-b" data-group-tab="group-b">Bグループ</button>
             <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-c" data-group-tab="group-c">Cグループ</button>
             <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="group-d" data-group-tab="group-d">Dグループ</button>
+            <button class="group-tab" type="button" role="tab" aria-selected="false" aria-controls="final-bracket" data-group-tab="final-bracket">決勝</button>
           </div>
     
           <div class="group-panels">
@@ -330,6 +331,91 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </section>
+
+            <section id="final-bracket" class="group-panel" role="tabpanel" aria-labelledby="final-bracket-tab" hidden>
+              <div class="group-panel__head">
+                <h4>決勝トーナメント</h4>
+              </div>
+
+              <div class="final-bracket-wrap">
+                <div class="final-bracket" aria-label="6人勝ち抜き決勝トーナメント表">
+                  <div class="bracket-round">
+                    <h5>一回戦</h5>
+                    <div class="bracket-round__matches">
+                      <article class="bracket-match">
+                        <p class="bracket-match__label">一回戦 第1局</p>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">2</span>
+                          <span class="bracket-name">海老fly</span>
+                        </div>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">3</span>
+                          <span class="bracket-name">Benjamin</span>
+                        </div>
+                      </article>
+
+                      <article class="bracket-match">
+                        <p class="bracket-match__label">一回戦 第2局</p>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">4</span>
+                          <span class="bracket-name">森永タニシ</span>
+                        </div>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">5</span>
+                          <span class="bracket-name">こげもち</span>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="bracket-round">
+                    <h5>準決勝</h5>
+                    <div class="bracket-round__matches bracket-round__matches--semifinal">
+                      <article class="bracket-match">
+                        <p class="bracket-match__label">準決勝 第1局</p>
+                        <div class="bracket-player bracket-player--seeded">
+                          <span class="bracket-seed">1</span>
+                          <span class="bracket-name">藤井さとり</span>
+                        </div>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">W</span>
+                          <span class="bracket-name">一回戦 第1局 勝者</span>
+                        </div>
+                      </article>
+
+                      <article class="bracket-match">
+                        <p class="bracket-match__label">準決勝 第2局</p>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">W</span>
+                          <span class="bracket-name">一回戦 第2局 勝者</span>
+                        </div>
+                        <div class="bracket-player bracket-player--seeded">
+                          <span class="bracket-seed">6</span>
+                          <span class="bracket-name">hanabi</span>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="bracket-round">
+                    <h5>決勝</h5>
+                    <div class="bracket-round__matches bracket-round__matches--final">
+                      <article class="bracket-match bracket-match--championship">
+                        <p class="bracket-match__label">決勝</p>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">W</span>
+                          <span class="bracket-name">準決勝 第1局 勝者</span>
+                        </div>
+                        <div class="bracket-player">
+                          <span class="bracket-seed">W</span>
+                          <span class="bracket-name">準決勝 第2局 勝者</span>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
