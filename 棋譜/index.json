@@ -48,6 +48,12 @@
         { "title": "●bookhunter vs やまちー○", "path": "棋譜/グループD/bookhunter_vs_yamachiii.kif" },
         { "title": "○マルシェル vs やまちー●", "path": "棋譜/グループD/YamachiMarcelle.kif" }
       ]
+    },
+    {
+      "name": "決勝",
+      "files": [
+        { "title": "○こげもち vs 森永タニシ●", "path": "棋譜/決勝/こげもち_vs_森永タニシ.kif" }
+      ]
     }
   ]
 }
